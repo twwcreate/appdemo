@@ -1,0 +1,18 @@
+import React from "react";
+import Message from "./Message";
+
+const Info = ({ messages, setMessages }) => {
+  
+  return (
+    <div>
+      {messages.map((msg) => (
+       <Message msg={msg} 
+       messages={messages} 
+       setMessages={setMessages} /> //出現番<p>{msg}</p>
+
+       ))}
+    </div>
+    );
+};
+
+export default Info;

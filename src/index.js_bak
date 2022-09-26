@@ -1,0 +1,40 @@
+//Express.js
+// const React = require("react");
+// const ReactDOM = require("react-dom");
+//ES6 寫法
+//以下全是javascript: 
+import React from "react";
+import ReactDOM from "react-dom";
+
+//React.createElement(three parameters)
+//null位置是放css.
+// function App() {
+  //這裡是呈現單項資料:
+  // return React.createElement("h1", null, "This is React App.:D")
+  //這裡是用div呈現多項元素:
+//   return React.createElement("div", null, [
+//     React.createElement("h1", { style: { color: "red" }}, "My Profile"),
+//     React.createElement("p", null, "My name is Mike Huang."),
+//     React.createElement("button", null, "contact us now."),
+//   ]);
+// }
+
+//JSX version // Langugae mode要轉成JavaScript React
+//App 一定要是大寫
+function App() {
+  return (
+    <div>
+      <h1>My Profileeeee</h1>
+      <p>ddddddddddddd</p>
+      <button>contact us nowsssss.</button>
+    </div>
+  );
+}
+
+//react原理就是用function創造出一個元素, 再把它放在html呈現.
+//#root related to the index.html的id=root
+//ReactDOM.render()是function
+//ReactDOM.render(第一個元素, 要呈現在html什麼位置)
+// ReactDOM.render(React.createElement(App), document.querySelector("#root2"));
+ReactDOM.render(App(), document.querySelector("#root2"));
+
